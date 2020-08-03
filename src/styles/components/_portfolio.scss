@@ -9,10 +9,7 @@
     flex-direction: column;
 
 }
-.portfolio__title{
-    margin-bottom: 2rem;
 
-}
 
 .portfolio__content{
     margin:4rem 5rem;
@@ -83,8 +80,7 @@
         border: 1px solid $dark;
         border-radius: 4rem;
         color: $dark;
-        font-size: 1rem;
-        padding:1rem 4rem;
+        padding:.5rem 2rem;
         align-self: flex-end;
    
 

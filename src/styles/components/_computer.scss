@@ -35,15 +35,19 @@
         height: 27rem;
         min-width: 100%;
         border: 1px solid $black;
-        padding: 3rem;
+        padding: 1.5rem;
         transition: .2s;
+        height: auto;    
 
         i{
-            display: inline;
+            display: inline-block;
+            margin-bottom: .5rem;
         }
 
         @media (min-width:570px) {
-            height: 20rem;        }
+            height: 20rem;   
+            padding: 3rem;
+             }
     }
 
 }

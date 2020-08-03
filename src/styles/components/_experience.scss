@@ -1,6 +1,15 @@
 .experience{
     background-color: $middle;
     min-height: 100vh;
+
+    h1{
+        width: 5em;
+        margin:0;
+        @media (min-width: 700px){
+            width: auto;
+            margin:4rem;
+        }
+    }
 }
 
 .experience__timeline{
@@ -56,7 +65,7 @@
 .experience__items{
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 3rem;
+    margin: 0 0 0 2rem;
 
     @media (min-width: 700px){
         flex-direction: row;
@@ -78,7 +87,7 @@
     content: '';
     height: 1.7rem;
     position: absolute;
-    left:-5.7rem;
+    left:-4.7rem;
     top: 2rem;
     width: 1.7rem;
 

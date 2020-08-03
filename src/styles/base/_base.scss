@@ -22,8 +22,11 @@
     h1{
         font-family: 'Sen', sans-serif;
         font-size: calc(2rem + (((100vw - 15rem) / (128 - 15))) * (6 - 2));
-        line-height: calc(4rem + (((100vw - 15rem) / (128 - 15))) * (6 - 4));
+        line-height: calc(2rem + (((100vw - 15rem) / (128 - 15))) * (6 - 2));
     }
+    h2{
+      line-height: calc(2rem + (((100vw - 15rem) / (128 - 15))) * (4 - 2));
+  }
 
     
     button{
@@ -42,7 +45,7 @@
     }
 
     .base__hr{
-        border: .3rem solid $black;
+        border: .2rem solid $black;
         animation: move 1.5s ease;
         width: 100%;
     }

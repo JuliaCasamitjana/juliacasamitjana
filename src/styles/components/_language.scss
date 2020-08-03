@@ -6,13 +6,16 @@
 .language__main{
     display: flex;
     flex-direction: column;
+
+    h1{
+        margin-bottom:1rem;
+    }
 }
 
 .language__content{
     display: grid;
-    gap: 3rem;
+    gap: 4rem;
    grid-template-columns: 1fr 1fr;
-   height: 50%;
    margin-bottom: 5rem;
 
    @media(min-width: 800px){

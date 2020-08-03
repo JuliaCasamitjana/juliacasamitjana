@@ -17,6 +17,9 @@
      }
 
     a{
-       margin:3rem;
+       margin:1rem;
+       @media (min-width:570px) {
+        margin:3rem;   
+      }
     }
 }
