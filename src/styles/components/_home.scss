@@ -1,0 +1,32 @@
+.home{
+    background-color: $light;
+    height: 100vh;
+
+
+    h1{
+        line-height: calc(6rem + (((100vw - 15rem) / (128 -15))) * (15 - 6));
+        font-size: calc(5rem + (((100vw - 15rem) / (128 - 15))) * (15 - 5));
+        transform: rotateZ(-90deg);
+        transform-origin: 40% 20%;
+        transition: 1s ease;
+        margin-left:-7rem;
+        @media(min-width: 400px) {
+            margin-left:1rem;
+
+         }
+        @media(min-width: 600px) {
+            transform: rotateZ(0);
+       
+
+    }
+        
+}
+
+
+
+}
+    
+
+
+
+

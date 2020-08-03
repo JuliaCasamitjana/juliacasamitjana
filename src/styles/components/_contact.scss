@@ -1,0 +1,22 @@
+.contact{
+    background-color: $light;
+    min-height: 100vh;
+
+    h1{
+        margin: 4rem auto;
+    }
+}
+
+
+.contact__main{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;  
+    @media (min-width:570px) {
+       flex-direction: row;     
+     }
+
+    a{
+       margin:3rem;
+    }
+}

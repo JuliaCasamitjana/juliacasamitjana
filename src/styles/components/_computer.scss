@@ -1,0 +1,94 @@
+.computer{
+    background-color: $light;
+    min-height: 100vh;
+}
+
+.computer__main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width:800px) {
+        flex-direction: row;
+    }
+
+}
+
+.computer__content{
+    flex-grow: 1;
+    margin-left:0;
+    display: grid;
+    grid-template-columns: repeat( 1, minmax(15rem, 1fr) );
+    gap: 2rem;
+
+    @media (min-width:570px) {
+        grid-template-columns: repeat( 3, minmax(15rem, 1fr) );
+    }
+
+    @media (min-width:800px) {
+        margin-left:7rem;
+    }
+
+
+
+    .computer__skill{
+        height: 27rem;
+        min-width: 100%;
+        border: 1px solid $black;
+        padding: 3rem;
+        transition: .2s;
+
+        i{
+            display: inline;
+        }
+
+        @media (min-width:570px) {
+            height: 20rem;        }
+    }
+
+}
+
+
+.computer__skill__info{
+    display: block;
+    transition: .2s;
+    font-size: 1.4rem;
+
+    @media (min-width:570px) {
+        display: none;     
+}
+
+}
+@media (min-width:570px) {
+    .computer__skill:hover{
+        cursor: pointer;
+        z-index:2; /*we increase the z-index to cover the other*/
+        background: $black;
+        color: white;
+        .computer__skill__info{
+            display: block;
+        }
+    }
+      
+    .computer__skill:nth-child(3n + 1):hover {
+        @media (min-width:570px) {
+            margin-right:calc(-200% - 4rem); /* we remove (2 x grid items + 2 x gap) */
+    
+        }
+      }
+      .computer__skill:nth-child(3n + 2):hover {
+        @media (min-width:570px) {
+            margin-left:calc(-100% - 2rem);
+            margin-right:calc(-100% - 2rem);
+        }
+    
+      }
+      .computer__skill:nth-child(3n + 3):hover {
+       
+        @media (min-width:570px) {
+            margin-left:calc(-200% - 4rem);
+        }
+      }
+       
+}
+

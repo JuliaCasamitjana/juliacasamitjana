@@ -1,17 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import './styles/styles.scss';
+import Contact from './components/Contact';
+import Home from './components/Home';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import LanguageSkills from './components/LanguageSkills';
+import ComputerSkills from './components/ComputerSkills';
+import Portfolio from './components/Portfolio';
+import Header from './components/Header';
+import NotFound from './components/NotFound';
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <div>
+        <Header />
+        <Switch>
+          <Route path="/" component={Home} exact={true}/>
+          <Route path="/portfolio/" component={Portfolio}/>
+          <Route path="/education/" component={Education}/>
+          <Route path="/experience/" component={Experience}/>
+          <Route path="/languageskills/" component={LanguageSkills}/>
+          <Route path="/computerskills/" component={ComputerSkills}/>
+          <Route path="/contact" component={Contact}/>
+          <Route component={NotFound}/>
+        </Switch>
+      </div>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

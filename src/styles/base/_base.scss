@@ -1,0 +1,57 @@
+*{
+    box-sizing:border-box;
+    }
+    
+    html {
+        font-size: 62.5%;
+    }
+    
+    body {
+    color:$black;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 0;
+
+    @media (min-width: 700px){
+      font-size: 1.6rem;
+
+  }
+    }
+
+    h1{
+        font-family: 'Sen', sans-serif;
+        font-size: calc(2rem + (((100vw - 15rem) / (128 - 15))) * (6 - 2));
+        line-height: calc(4rem + (((100vw - 15rem) / (128 - 15))) * (6 - 4));
+    }
+
+    
+    button{
+    cursor:pointer;
+    border:none;
+    outline:none;
+    color:inherit;
+    }
+    button:disabled{
+    cursor:default;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .base__hr{
+        border: .3rem solid $black;
+        animation: move 1.5s ease;
+        width: 100%;
+    }
+
+    @keyframes move {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
