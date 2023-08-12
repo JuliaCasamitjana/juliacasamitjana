@@ -4,7 +4,7 @@
 
 
     h1{
-        line-height: calc(6rem + (((100vw - 15rem) / (128 -15))) * (15 - 6));
+        line-height: calc(6rem + (((100vw - 15rem) / (128 - 15))) * (15 - 6));
         font-size: calc(5rem + (((100vw - 15rem) / (128 - 15))) * (15 - 5));
         transform: rotateZ(-90deg);
         transform-origin: 40% 20%;
