@@ -1,6 +1,5 @@
 .header {
   box-shadow: 0 0 0.5rem $black;
-  height: 4.7rem;
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -37,10 +36,9 @@
 
   &:hover {
     text-decoration: none;
-    box-shadow: 0 0 1rem $light;
-    @media (min-width: 1000px) {
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    }
+    background-color: $dark-gray;
+    color: white;
+
   }
 }
 
@@ -58,6 +56,7 @@
 .header__icon--hide {
   display: none;
 }
+
 #close-header {
   margin-right: 2rem;
   width: 100%;
@@ -72,7 +71,6 @@
 .is-active {
   background-color: $ultra-light;
   color: $black;
-  box-shadow: 0 0 1rem $black;
 
   @media (min-width: 1000px) {
     color: $ultra-light;

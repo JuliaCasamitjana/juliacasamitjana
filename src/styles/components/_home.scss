@@ -1,32 +1,59 @@
-.home{
-    background-color: $light;
-    height: 100.1vh;
+.home {
+  background-color: $light;
+  height: 100.1vh;
 
+  h1 {
+    // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    font-size: calc(4rem + (8 - 4) * ((100vw - 15rem) / (100 - 15)));
+    line-height: calc(6rem + (10 - 6) * ((100vw - 15rem) / (100 - 15)));
 
-    h1{
-        line-height: calc(6rem + (((100vw - 15rem) / (128 - 15))) * (15 - 6));
-        font-size: calc(5rem + (((100vw - 15rem) / (128 - 15))) * (15 - 5));
-        transform: rotateZ(-90deg);
-        transform-origin: 40% 20%;
-        transition: 1s ease;
-        margin-left:-7rem;
-        @media(min-width: 400px) {
-            margin-left:1rem;
+    transform: rotateZ(-90deg);
+    transform-origin: 40% -20%;
+    transition: 1s ease;
+    margin-left: -12rem;
 
-         }
-        @media(min-width: 600px) {
-            transform: rotateZ(0);
-       
-
+    @media (min-width: 450px) {
+      margin: 2rem 2rem 4rem 0;
+      transform: rotateZ(0);
     }
-        
+  }
+
+  &__contact {
+    display: flex;
+    margin: 3rem auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+
+    @media (min-width: 450px) {
+      margin: 3rem 0;
+      justify-content: flex-start;
+    }
+    a {
+      color: $black;
+      @media (min-width: 570px) {
+      }
+
+      &:hover svg {
+        filter: drop-shadow(3px 3px 1px rgba(104, 104, 104, 0.3));
+      }
+    }
+  }
+
+  &__card,
+  &__github,
+  &__linkedin {
+    height: 30px;
+    @media (min-width: 450px) {
+      height: 60px;
+    }
+  }
+
+  &__mail {
+    height: 35px;
+    @media (min-width: 450px) {
+      height: 68px;
+    }
+  }
 }
-
-
-
-}
-    
-
-
-
-

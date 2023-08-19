@@ -83,7 +83,7 @@ const Header = (props) => {
     <header className="header">
       <div className={"header__nav " + (nav === "open" ? "header__nav--active" : "")}>
         <NavLink to="/" className="header__item" activeClassName="is-active" exact={true} onClick={toggleHeader}>
-          JC
+          Contact
         </NavLink>
         <NavLink to="/education" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
           Education
