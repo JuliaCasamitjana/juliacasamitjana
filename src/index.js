@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import './styles/styles.scss';
-import Contact from './components/Contact';
 import Home from './components/Home';
 import Experience from './components/Experience';
 import Education from './components/Education';
@@ -27,7 +26,6 @@ ReactDOM.render(
           <Route path="/experience/" component={Experience}/>
           <Route path="/languageskills/" component={LanguageSkills}/>
           <Route path="/computerskills/" component={ComputerSkills}/>
-          <Route path="/contact" component={Contact}/>
           <Route component={NotFound}/>
         </Switch>
       </div>

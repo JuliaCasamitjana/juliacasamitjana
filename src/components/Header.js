@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation, withRouter } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 const Header = (props) => {
   const [nav, setNav] = useState("close");
   const [pos, setPos] = useState(window.pageYOffset);
@@ -97,15 +100,12 @@ const Header = (props) => {
         <NavLink to="/languageskills" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
           Language Skills
         </NavLink>
-        <NavLink to="/contact" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
-          Contact
-        </NavLink>
       </div>
       <div className={"header__icon " + (nav === "open" ? "header__icon--hide" : "")} id="open-header" onClick={toggleHeader}>
-        <i className={"fas fa-chevron-down fa-2x"}></i>
+      <FontAwesomeIcon icon={faChevronDown} />
       </div>
       <div className={"header__icon " + (nav === "close" ? "header__icon--hide" : "")} id="close-header" onClick={toggleHeader}>
-        <i className={"fas fa-chevron-up fa-2x"}></i>
+      <FontAwesomeIcon icon={faChevronUp} />
       </div>
     </header>
   );

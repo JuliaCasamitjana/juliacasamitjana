@@ -45,11 +45,8 @@
 }
 
 .header__icon {
-  display: block;
-  width: 100%;
-  height: 100%;
   text-align: center;
-  padding-top: 0.5rem;
+  font-size: 40px;
 
   @media (min-width: 1000px) {
     display: none;
