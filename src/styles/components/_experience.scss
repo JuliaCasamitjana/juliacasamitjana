@@ -5,7 +5,7 @@
   h1 {
     width: 5em;
     margin: 0;
-    @media (min-width: 700px) {
+    @media (min-width: 900px) {
       width: auto;
       margin: 4rem;
     }
@@ -27,12 +27,12 @@
   left: 0;
   animation: exp-timeline 5s ease;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     position: static;
     border-top: 0.3rem solid $black;
     display: inline-block;
     margin: 0 2rem;
-    transform: translateY(-1rem);
+    transform: translateY(-1.2rem);
     width: 100%;
   }
 }
@@ -45,7 +45,7 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   @keyframes exp-timeline {
     0% {
       width: 0%;
@@ -61,7 +61,7 @@
   flex-direction: column;
   margin: 0 0 0 2rem;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     flex-direction: row;
     margin: 0;
   }
@@ -103,7 +103,7 @@
   top: 2rem;
   width: 1.7rem;
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     left: 0;
     top: -4.75rem;
   }

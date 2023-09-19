@@ -42,6 +42,21 @@ function Experience() {
                 and education of regional sales partners.
               </p>
             </div>
+            <div className="experience__item">
+              <p className="experience__details">Aug. 2015 - Mar 2016</p>
+              <h2>Product Engineer</h2>
+              <p className="experience__details">
+                KONUX GmbH
+                <br />
+                Flößergasse 2, 81369 München, Germany
+              </p>
+              <h3>Main duties</h3>
+              <p className="experience__text">
+                Execution of hazard analysis, FMEA and documentation of development processes. Planning, organization and execution of development projects from
+                concept to prototype. Establishing 3D Data and drawings using SOLIDWORS. Testing design concepts concerning the implementation of a torque
+                sensor.
+              </p>
+            </div>
           </div>
         </div>
       </div>
