@@ -19,7 +19,7 @@ const LanguageSkills = () =>  (
                     </div>
                     <div>
                         <h2>GERMAN</h2>
-                        <p>Intermediate Level. Goethe- Zertificat B2.</p>
+                        <p>Intermediate Level. Goethe-Zertificat B2.</p>
                     </div>
                     <div>
                         <h2>ENGLISH</h2>
