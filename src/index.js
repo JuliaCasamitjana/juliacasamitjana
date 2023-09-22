@@ -11,9 +11,6 @@ import Portfolio from './components/Portfolio';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
 
-
-
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

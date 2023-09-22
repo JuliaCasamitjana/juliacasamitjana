@@ -44,7 +44,8 @@
 
 .header__icon {
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
+  padding: 10px;
 
   @media (min-width: 1000px) {
     display: none;

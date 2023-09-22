@@ -1,6 +1,7 @@
 .language{
     background-color: $middle;
-    height: 100.1vh;
+    height: 100vh; // Fallback for browsers not supporting svh
+    height: 100svh;
 }
 
 .language__main{

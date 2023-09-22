@@ -1,6 +1,10 @@
 .home {
   background-color: $light;
-  height: 100.1vh;
+
+  .container {
+    height: 100vh; // Fallback for browsers not supporting svh
+    height: 100svh;
+  }
 
   h1 {
     // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
