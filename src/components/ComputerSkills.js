@@ -2,7 +2,7 @@ import React from "react";
 import HeaderPage from "./HeaderPage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDatabase, faFileCode, faCogs, faVideo, faSquare } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faFileCode, faCogs, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faJsSquare, faReact, faNodeJs, faWordpress, faWindows } from "@fortawesome/free-brands-svg-icons";
 
 const ComputerSkills = () => (

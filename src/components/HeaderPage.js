@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 const HeaderPage = (props) => (
     <div className="header-page">
       <p>{props.num}</p>

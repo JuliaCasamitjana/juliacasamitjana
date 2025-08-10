@@ -1,5 +1,4 @@
 import HeaderPage from "./HeaderPage";
-import readingtimes from "..//img/readingtimes.png";
 import bank from "../img/bank.png";
 import countries from "../img/countries.png";
 import edad from "../img/edad.png";

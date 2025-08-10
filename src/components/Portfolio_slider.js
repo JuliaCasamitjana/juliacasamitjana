@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import HeaderPage from './HeaderPage';
 
 import readingtimes from "..//img/readingtimes.png";
