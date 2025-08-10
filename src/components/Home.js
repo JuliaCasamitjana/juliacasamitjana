@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderPage from "./HeaderPage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,20 +18,57 @@ const Home = () => {
             Julia <br /> Casamitjana
           </h1>
           <hr className="base__hr" />
-          <div className="home__contact">
-            {/* <a href="/JuliaCasamitjana-cv.pdf" rel="noopener noreferrer" target="_blank">
-              <FontAwesomeIcon icon={faAddressCard} className="home__card" />
-            </a> */}
-            <a href="https://github.com/JuliaCasamitjana" rel="noopener noreferrer" target="_blank">
-              <FontAwesomeIcon icon={faGithub} className="home__github" />
+          <nav
+            className="home__contact"
+            aria-label="Contact and social media links"
+          >
+            <a
+              href="/JuliaCasamitjana-cv.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Download my CV (PDF, opens in new tab)"
+              titlel="Download my CV (PDF, opens in new tab)"
+            >
+              <FontAwesomeIcon
+                icon={faAddressCard}
+                className="home__card"
+                aria-hidden="true"
+              />
             </a>
-            <a href="https://www.linkedin.com/in/juliacasamitjana" rel="noopener noreferrer" target="_blank">
-              <FontAwesomeIcon icon={faLinkedin} className="home__linkedin" />
+            <a
+              href="https://github.com/JuliaCasamitjana"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Visit my GitHub profile (opens in new tab)"
+              title="Visit my GitHub profile (opens in new tab)"
+            >
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="home__github"
+                aria-hidden="true"
+              />
             </a>
-            <a href={linktext}>
-              <FontAwesomeIcon icon={faEnvelope} className="home__mail" />
+            <a
+              href="https://www.linkedin.com/in/juliacasamitjana"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Connect with me on LinkedIn (opens in new tab)"
+              title="Connect with me on LinkedIn (opens in new tab)"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="home__linkedin"
+                aria-hidden="true"
+              />
             </a>
-          </div>
+            <a href={linktext} aria-label="Send me an email" title="Send me an email">
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="home__mail"
+                aria-hidden="true"
+              />
+            </a>
+          </nav>
         </div>
       </div>
     </div>
