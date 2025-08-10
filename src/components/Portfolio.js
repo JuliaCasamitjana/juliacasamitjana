@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderPage from "./HeaderPage";
 import readingtimes from "..//img/readingtimes.png";
 import bank from "../img/bank.png";
@@ -19,19 +18,6 @@ const Portfolio = () => {
             <p>Those are some of the web sites I’ve developed as personal projects, including the web site you’re currently visiting.</p>
           </div>
           <div className="portfolio__content">
-            <div className="portfolio__item">
-              <div>
-                <img className="portfolio__item__img" src={readingtimes} alt="reading timeapp"></img>
-              </div>
-              <div className="portfolio__item__info">
-                <h2>Book searcher</h2>
-                <p>Estimates the reading time for the chosen book</p>
-                <p className="portfolio__item__stack">Stack used: React, Nodejs, Express, MongoDB, Mongoose, Amazon API</p>
-                <a href="https://www.tiempolectura.com/" className="portfolio__item__visit" target="_blank" rel="noopener noreferrer">
-                  <button>Visit</button>
-                </a>
-              </div>
-            </div>
             <div className="portfolio__item">
               <div>
                 <img className="portfolio__item__img" src={countries} alt="country searcher"></img>
