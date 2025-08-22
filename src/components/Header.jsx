@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation, withRouter } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-const Header = (props) => {
+const Header = () => {
   const [nav, setNav] = useState("close");
   const [pos, setPos] = useState(window.pageYOffset);
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     //Scroll to top when changing route
     window.scrollTo(1, 0, "smooth");
   }, [pathname]);
 
-  const toggleHeader = () => {
-    nav === "close" ? setNav("open") : setNav("close");
-  };
+const toggleHeader = (e) => {
+  e.stopPropagation(); // Prevent the click from bubbling to window
+  nav === "close" ? setNav("open") : setNav("close");
+};
 
   useEffect(() => {
     function handleResize() {
@@ -54,61 +56,85 @@ const Header = (props) => {
 
       let currentScroll = window.pageYOffset;
       let visibleScroll = document.body.clientHeight;
-      console.log("alt", scrollHeight);
-      console.log("current", currentScroll);
-      console.log("window", visibleScroll);
+      // console.log("alt", scrollHeight);
+      // console.log("current", currentScroll);
+      // console.log("window", visibleScroll);
 
-      // const nav = ["/", "/education", "/experience", "/computerskills", "portfolio", "/languageskills", "/contact"];
-      // let currentPageIndex = nav.indexOf(pathname);
+      // const navRoutes = ["/", "/education", "/experience", "/computerskills", "/portfolio", "/languageskills"];
+      // let currentPageIndex = navRoutes.indexOf(pathname);
 
       // if (scrollHeight === currentScroll + visibleScroll){ //if scroll to end
-      //     if (currentPageIndex === nav.length-1){
-      //       props.history.push(nav[0]) }else{
-      //       props.history.push(nav[currentPageIndex + 1]);
+      //     if (currentPageIndex === navRoutes.length-1){
+      //       navigate(navRoutes[0]);
+      //     } else {
+      //       navigate(navRoutes[currentPageIndex + 1]);
       //     }
-      // }else if (currentScroll === 0){ //if scroll to top
+      // } else if (currentScroll === 0){ //if scroll to top
       //   if (currentPageIndex === 0){
-      //     props.history.push(nav[nav.length-1])
-      //   }else{
-      //     props.history.push(nav[currentPageIndex - 1]);
+      //     navigate(navRoutes[navRoutes.length-1]);
+      //   } else {
+      //     navigate(navRoutes[currentPageIndex - 1]);
       //   }
-
       // }
     }
     window.addEventListener("scroll", checkPos);
     return () => window.removeEventListener("scroll", checkPos); // Remove event listener on cleanup
-  }, [pos, props.history, props.location, pathname]);
+  }, [pos, navigate, pathname]);
 
   return (
     <header className="header">
       <div className={"header__nav " + (nav === "open" ? "header__nav--active" : "")}>
-        <NavLink to="/" className="header__item" activeClassName="is-active" exact={true} onClick={toggleHeader}>
+        <NavLink 
+          to="/" 
+          className={({ isActive }) => `header__item ${isActive ? 'is-active' : ''}`}
+          onClick={toggleHeader}
+        >
           Contact
         </NavLink>
-        <NavLink to="/education" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
+        <NavLink 
+          to="/education" 
+          className={({ isActive }) => `header__item ${isActive ? 'is-active' : ''}`}
+          onClick={toggleHeader}
+        >
           Education
         </NavLink>
-        <NavLink to="/experience" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
+        <NavLink 
+          to="/experience" 
+          className={({ isActive }) => `header__item ${isActive ? 'is-active' : ''}`}
+          onClick={toggleHeader}
+        >
           Experience
         </NavLink>
-        <NavLink to="/computerskills" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
+        <NavLink 
+          to="/computerskills" 
+          className={({ isActive }) => `header__item ${isActive ? 'is-active' : ''}`}
+          onClick={toggleHeader}
+        >
           Computer Skills
         </NavLink>
-        <NavLink to="/portfolio" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
+        <NavLink 
+          to="/portfolio" 
+          className={({ isActive }) => `header__item ${isActive ? 'is-active' : ''}`}
+          onClick={toggleHeader}
+        >
           Portfolio
         </NavLink>
-        <NavLink to="/languageskills" className="header__item" activeClassName="is-active" onClick={toggleHeader}>
+        <NavLink 
+          to="/languageskills" 
+          className={({ isActive }) => `header__item ${isActive ? 'is-active' : ''}`}
+          onClick={toggleHeader}
+        >
           Language Skills
         </NavLink>
       </div>
       <div className={"header__icon " + (nav === "open" ? "header__icon--hide" : "")} id="open-header" onClick={toggleHeader}>
-      <FontAwesomeIcon icon={faChevronDown} />
+        <FontAwesomeIcon icon={faChevronDown} />
       </div>
       <div className={"header__icon " + (nav === "close" ? "header__icon--hide" : "")} id="close-header" onClick={toggleHeader}>
-      <FontAwesomeIcon icon={faChevronUp} />
+        <FontAwesomeIcon icon={faChevronUp} />
       </div>
     </header>
   );
 };
 
-export default withRouter(Header);
+export default Header;

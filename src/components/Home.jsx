@@ -27,12 +27,12 @@ const Home = () => {
               rel="noopener noreferrer"
               target="_blank"
               aria-label="Download my CV (PDF, opens in new tab)"
-              titlel="Download my CV (PDF, opens in new tab)"
+              title="Download my CV (PDF, opens in new tab)"
             >
               <FontAwesomeIcon
                 icon={faAddressCard}
-                className="home__card"
                 aria-hidden="true"
+                size="2xl"
               />
             </a>
             <a
@@ -44,8 +44,8 @@ const Home = () => {
             >
               <FontAwesomeIcon
                 icon={faGithub}
-                className="home__github"
                 aria-hidden="true"
+                size="2xl"
               />
             </a>
             <a
@@ -57,15 +57,15 @@ const Home = () => {
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="home__linkedin"
                 aria-hidden="true"
+                size="2xl"
               />
             </a>
             <a href={linktext} aria-label="Send me an email" title="Send me an email">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="home__mail"
                 aria-hidden="true"
+                size="2xl"
               />
             </a>
           </nav>

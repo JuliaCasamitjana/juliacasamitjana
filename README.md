@@ -1,6 +1,6 @@
 # CV React App
 
-This project is a personal CV/portfolio website built with [Create React App](https://github.com/facebook/create-react-app).
+This project is a personal CV/portfolio website built with [React](https://react.dev/) and [Vite](https://vitejs.dev/).
 
 ## Features
 
@@ -12,7 +12,7 @@ This project is a personal CV/portfolio website built with [Create React App](ht
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (v22.1 or compatible)
+- [Node.js](https://nodejs.org/) (>=20.19.0 <21 **or** >=22.12.0)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
 ## Getting Started
@@ -32,19 +32,18 @@ This project is a personal CV/portfolio website built with [Create React App](ht
 
 3. **Start the development server:**
    ```sh
-   npm start
+   npm run dev
    # or
-   yarn start
+   yarn dev
    ```
 
-   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
 ## Available Scripts
 
-- `start` – Runs the app in development mode.
+- `dev` – Runs the app in development mode.
 - `build` – Builds the app for production.
-- `test` – Runs tests.
-- `eject` – Ejects the app (not reversible).
+- `preview` – Previews the production build locally.
 
 ## Folder Structure
 
@@ -54,6 +53,13 @@ src/
   App.js           # Main app component
   index.js         # Entry point
   ...
+```
+
+## Deployment
+
+If deploying to GitHub Pages or a subpath, ensure the `base` option in `vite.config.js` matches your repository name:
+```js
+base: '/juliacasamitjana'
 ```
 
 ## License

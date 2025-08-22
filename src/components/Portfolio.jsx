@@ -23,7 +23,7 @@ const Portfolio = () => {
               </div>
               <div className="portfolio__item__info">
                 <h2>Country searcher</h2>
-                <p>Fetches information from every conutry in the world from an API.</p>
+                <p>Fetches information from every country in the world from an API.</p>
                 <p className="portfolio__item__stack">Stack used: Basic web design languages (HTML5 and CSS3), SASS, React, Redux and axios</p>
                 <a
                   href="https://rest-countries-api-git-master.juliacasamitjana.vercel.app/"

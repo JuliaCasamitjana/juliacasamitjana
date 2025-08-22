@@ -44,20 +44,4 @@
       }
     }
   }
-
-  &__card,
-  &__github,
-  &__linkedin {
-    height: 30px;
-    @media (min-width: 450px) {
-      height: 60px;
-    }
-  }
-
-  &__mail {
-    height: 35px;
-    @media (min-width: 450px) {
-      height: 68px;
-    }
-  }
 }
